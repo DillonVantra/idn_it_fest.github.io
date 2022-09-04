@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-clr: #3ab4b6;
+  --secondary-clr: #d2dc02;
+  --tertiary-clr: #00ffff;
+}
 
 * {
   padding: 0;
@@ -6,13 +12,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Raleway", sans-serif;
+}
+
 /* Navbar Section --start */
 .navbar {
   display: flex;
-  margin-bottom: 5.8rem;
-  width: 100%;
+  max-width: 1100px;
   height: 70px;
-  background-color: #3ab4b6;
+  margin: 1.5rem auto 0.6rem auto;
+  /* background-color: #3ab4b6; */
   font-family: "Lato", sans-serif;
   justify-content: space-between;
 }
@@ -41,7 +51,7 @@
 
 .navbar__menu a {
   text-decoration: none;
-  color: #ddd;
+  color: #3ab4b6;
   font-weight: 700;
   font-size: large;
   margin: 0 13px 0 13px;
@@ -50,6 +60,23 @@
 /* Navbar Section --end */
 
 /* Image Slideshow --start */
+/* Slideshow Title */
+.slideshow-title {
+  display: block;
+  text-align: center;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: #f2f2f2;
+  background: #3ab4b6;
+  padding: 10px 0;
+  margin-bottom: 1.5rem;
+  word-spacing: 3px;
+}
+
+.slideshow-title span {
+  color: var(--tertiary-clr);
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -60,6 +87,11 @@
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+.mySlides img {
+  border-radius: 1.5rem;
+  box-shadow: 1px 10px 20px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Next & previous buttons */
@@ -93,8 +125,10 @@
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
+  color: #111;
+  /* background: #f2f2f2; */
+  font-size: 20px;
+  font-weight: 700;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -116,7 +150,7 @@
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 5px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -125,7 +159,7 @@
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #3abddd;
 }
 
 /* Fading animation */
@@ -143,3 +177,7 @@
   }
 }
 /* Image Slideshow --end */
+
+/* MediaQuery --start */
+
+/* MediaQuery --end */
