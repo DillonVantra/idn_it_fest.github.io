@@ -4,6 +4,7 @@
   --primary-clr: #3ab4b6;
   --secondary-clr: #d2dc02;
   --tertiary-clr: #00ffff;
+  --fourth-clr: #857ff1;
 }
 
 * {
@@ -18,12 +19,20 @@ body {
 
 /* Navbar Section --start */
 .navbar {
+  position: sticky;
+  top: 0;
+  margin: 1.5rem auto 0 auto;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  z-index: 1000;
+  box-shadow: 0px 5px 3px 0.1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__container {
   display: flex;
+  margin: 0 auto;
   max-width: 1100px;
   height: 70px;
-  margin: 1.5rem auto 0.6rem auto;
-  /* background-color: #3ab4b6; */
-  font-family: "Lato", sans-serif;
   justify-content: space-between;
 }
 
@@ -34,11 +43,11 @@ body {
 }
 
 .navbar__logo a {
-  margin: 0 10px 0 10px;
+  margin: 0 10px 0 40px;
   text-decoration: none;
-  color: #d2dc02;
-  font-weight: 700;
-  font-size: larger;
+  color: var(--secondary-clr);
+  font-weight: 800;
+  font-size: 1.7rem;
   font-style: italic;
   letter-spacing: 1px;
 }
@@ -51,7 +60,7 @@ body {
 
 .navbar__menu a {
   text-decoration: none;
-  color: #3ab4b6;
+  color: var(--primary-clr);
   font-weight: 700;
   font-size: large;
   margin: 0 13px 0 13px;
@@ -67,7 +76,11 @@ body {
   font-style: italic;
   font-size: 2.2rem;
   color: #f2f2f2;
-  background: #3ab4b6;
+  background: linear-gradient(
+    90deg,
+    rgba(133, 127, 241, 1) 0%,
+    rgba(58, 180, 182, 1) 100%
+  );
   padding: 10px 0;
   margin-bottom: 1.5rem;
   word-spacing: 3px;
@@ -107,14 +120,14 @@ body {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 50% 50% 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 50% 0 0 50%;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -125,15 +138,18 @@ body {
 
 /* Caption text */
 .text {
-  color: #111;
+  color: #fff;
   /* background: #f2f2f2; */
   font-size: 20px;
   font-weight: 700;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 4px;
   width: 100%;
   text-align: center;
+  text-shadow: 0px 0px 2px #eee;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 /* Number text (1/3 etc) */
