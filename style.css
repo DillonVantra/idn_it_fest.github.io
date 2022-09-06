@@ -4,6 +4,7 @@
   --primary-clr: #3ab4b6;
   --secondary-clr: #d2dc02;
   --tertiary-clr: #00ffff;
+  --fourth-clr: #857ff1;
 }
 
 * {
@@ -18,12 +19,20 @@ body {
 
 /* Navbar Section --start */
 .navbar {
+  position: sticky;
+  top: 0;
+  margin: 1.5rem auto 0 auto;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  z-index: 1000;
+  box-shadow: 0px 5px 3px 0.1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar__container {
   display: flex;
+  margin: 0 auto;
   max-width: 1100px;
   height: 70px;
-  margin: 1.5rem auto 0.6rem auto;
-  /* background-color: #3ab4b6; */
-  font-family: "Lato", sans-serif;
   justify-content: space-between;
 }
 
@@ -34,11 +43,11 @@ body {
 }
 
 .navbar__logo a {
-  margin: 0 10px 0 10px;
+  margin: 0 10px 0 40px;
   text-decoration: none;
-  color: #d2dc02;
-  font-weight: 700;
-  font-size: larger;
+  color: var(--secondary-clr);
+  font-weight: 800;
+  font-size: 1.7rem;
   font-style: italic;
   letter-spacing: 1px;
 }
@@ -51,7 +60,7 @@ body {
 
 .navbar__menu a {
   text-decoration: none;
-  color: #3ab4b6;
+  color: var(--primary-clr);
   font-weight: 700;
   font-size: large;
   margin: 0 13px 0 13px;
@@ -67,7 +76,11 @@ body {
   font-style: italic;
   font-size: 2.2rem;
   color: #f2f2f2;
-  background: #3ab4b6;
+  background: linear-gradient(
+    90deg,
+    rgba(133, 127, 241, 1) 0%,
+    rgba(58, 180, 182, 1) 100%
+  );
   padding: 10px 0;
   margin-bottom: 1.5rem;
   word-spacing: 3px;
@@ -177,6 +190,68 @@ body {
   }
 }
 /* Image Slideshow --end */
+
+/* Services --start */
+.features {
+  background: #f9f9f9;
+  max-width: 100%;
+  margin-top: 2rem;
+  height: max-content;
+}
+
+.features-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.features__title {
+  padding: 1.5rem 3.5rem 0.3rem 3.5rem;
+  font-size: 2.7rem;
+  font-weight: 800;
+}
+
+.features-container hr {
+  width: 20.8rem;
+  margin: 0 0 4rem 37px;
+  border: 1px solid var(--secondary-clr);
+  border-radius: 50%;
+}
+
+.features__menu {
+  display: grid;
+  max-width: 700px;
+  max-height: fit-content;
+  margin: 0 auto;
+  grid-template: auto auto / auto auto;
+  gap: 10rem 0px;
+  justify-items: center;
+  align-items: center;
+}
+
+.features__menu div {
+  background: #eee;
+  padding: 1rem;
+  height: 140px;
+  width: 140px;
+  border-radius: 30px;
+  box-shadow: 0px 7px 12px 1px rgba(0, 0, 0, 0.2);
+}
+
+.features__menu div:nth-child(1) {
+  background: #59ce8f;
+}
+
+.features__menu div img {
+  width: 100%;
+}
+
+.features__menu div h5 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 23px 0 0 0;
+}
+
+/* Services --end */
 
 /* MediaQuery --start */
 
